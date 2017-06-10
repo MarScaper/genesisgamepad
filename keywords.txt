@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map For GenesisGamepad
+# Syntax Coloring Map For genesisgamepad
 #######################################
 
 #######################################
@@ -12,13 +12,13 @@ GenesisGamepad	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-GenesisGamepad                               	KEYWORD2
-update                               		KEYWORD2
-setRefreshFrequency                       	KEYWORD2
-setEnable               			KEYWORD2
-setGamepadDelegate              		KEYWORD2
-gamepadDelegate          			KEYWORD2
-attachInterrupt           			KEYWORD2
+GenesisGamepad                 KEYWORD2
+update                         KEYWORD2
+setRefreshFrequency            KEYWORD2
+setEnable               	   KEYWORD2
+setGamepadDelegate             KEYWORD2
+gamepadDelegate          	   KEYWORD2
+attachInterrupt           	   KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)

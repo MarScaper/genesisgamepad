@@ -1,4 +1,4 @@
-# Ephemeris
+# Genesis/Mega Drive Gamepad
 ![Alt text](/genesisgamepad.jpg?raw=true "Optional Title")
 
 ## Synopsis
