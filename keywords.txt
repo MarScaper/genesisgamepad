@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map For GenesisGamepad
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+GenesisGamepad	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+GenesisGamepad                               	KEYWORD2
+update                               		KEYWORD2
+setRefreshFrequency                       	KEYWORD2
+setEnable               			KEYWORD2
+setGamepadDelegate              		KEYWORD2
+gamepadDelegate          			KEYWORD2
+attachInterrupt           			KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+GenesisGamepad
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+
