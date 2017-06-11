@@ -9,7 +9,7 @@ Simple C++ library allowing to control a Genesis/Mega Drive gamepad with an Ardu
 ![Alt text](/db9_female.jpg?raw=true "Optional Title")
 
 |Pin |	Button(s) | Wire |
-|----|-------------------|
+|----|------------|------|
 |1   |Up          |Brown |
 |2   |Down        |Red   |
 |3   |Left        |Orange|
