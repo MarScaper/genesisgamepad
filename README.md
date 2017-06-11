@@ -1,5 +1,5 @@
-# Genesis/Mega Drive Gamepad
-![Alt text](/genesisgamepad.jpg?raw=true "Optional Title")
+# Genesis/Mega Drive Gamepad with Arduino
+![Alt text](/genesis-gamepad.jpg?raw=true "Optional Title")
 
 ## Synopsis
 Simple C++ library allowing to control a Genesis/Mega Drive gamepad with an Arduino.
@@ -69,6 +69,8 @@ See examples directory for full sample code.
 ## Motivation
 
 This library is part of a personnal project to improve my EM10 Takahashi mount thanks to Arduino.
+
+![Alt text](/gamepad-with-em10-takahashi.jpg?raw=true "Optional Title")
 
 ## License
 
