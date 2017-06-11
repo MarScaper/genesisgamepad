@@ -101,13 +101,16 @@ void GenesisGamepad::update()
     
     byte newInputs = 0;
     
-    digitalWrite(_selectButtonPin,LOW);
-    newInputs |= (!digitalRead(_startCButtonPin) )<<3; // Start
-    newInputs |= (!digitalRead(_abButtonPin)     )<<2; // A
-    
-    digitalWrite(_selectButtonPin,HIGH);
-    newInputs |= (!digitalRead(_abButtonPin)     )<<1; // B
-    newInputs |= !digitalRead(_startCButtonPin);       // C
+    if( _selectButtonPin != -1 )
+    {
+      digitalWrite(_selectButtonPin,LOW);
+      newInputs |= (!digitalRead(_startCButtonPin) )<<3; // Start
+      newInputs |= (!digitalRead(_abButtonPin)     )<<2; // A
+      
+      digitalWrite(_selectButtonPin,HIGH);
+      newInputs |= (!digitalRead(_abButtonPin)     )<<1; // B
+      newInputs |= !digitalRead(_startCButtonPin);       // C
+    }
     
     newInputs |= (!digitalRead(_upButtonPin)     )<<7; // Up
     newInputs |= (!digitalRead(_downButtonPin)   )<<6; // Down
