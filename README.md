@@ -26,8 +26,8 @@ Simple C++ library allowing to control a Genesis/Mega Drive gamepad with an Ardu
 
 ## Code Example
 ```
-GenesisGamepad *gamePad = new GenesisGamepad(A0,A1,A2,A3,2,3,4);
-gamePad->attachInterrupt(gamepadInputsDidChangedCallback);
+GenesisGamepad *gamepad = new GenesisGamepad(A0,A1,A2,A3,2,3,4);
+gamepad->attachInterrupt(gamepadInputsDidChangedCallback);
 ```
 See examples directory for full sample code.
 
