@@ -18,7 +18,7 @@ void setup()
   gamePad = new GenesisGamepad(upButtonPin,downButtonPin,leftButtonPin,rightButtonPin,
                                selectButtonPin,abButtonPin,startCButtonPin);
                                
-  gamePad->attachInterrupt(gamepadInputsDidChangedCallback);
+  gamePad->attachCallback(gamepadInputsDidChangedCallback);
 
   Serial.println("-Press buttons on your gamepad-");
 }

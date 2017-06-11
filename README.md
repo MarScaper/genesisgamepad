@@ -29,8 +29,40 @@ Simple C++ library allowing to control a Genesis/Mega Drive gamepad with an Ardu
 
 ## Code Example
 ```
-GenesisGamepad *gamepad = new GenesisGamepad(A0,A1,A2,A3,2,3,4);
-gamepad->attachInterrupt(gamepadInputsDidChangedCallback);
+#include <GenesisGamepad.h>
+
+// Use the pins you want here
+int8_t upButtonPin     = A0;
+int8_t downButtonPin   = A1;
+int8_t leftButtonPin   = A2;
+int8_t rightButtonPin  = A3;
+int8_t selectButtonPin = 2;
+int8_t abButtonPin     = 3;
+int8_t startCButtonPin = 4;
+
+GenesisGamepad *gamePad = NULL;
+
+void setup() 
+{
+  Serial.begin(9600);
+
+  gamePad = new GenesisGamepad(upButtonPin,downButtonPin,leftButtonPin,rightButtonPin,
+                               selectButtonPin,abButtonPin,startCButtonPin);
+                               
+  gamePad->attachCallback(gamepadInputsDidChangedCallback);
+
+  Serial.println("-Press buttons on your gamepad-");
+}
+
+void loop() 
+{
+  gamePad->update();
+}
+
+void gamepadInputsDidChangedCallback(GenesisGamepad *sender, byte previousInputs, byte newInputs)
+{
+  Serial.println("Button state changed.");
+}
 ```
 See examples directory for full sample code.
 

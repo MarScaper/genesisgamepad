@@ -80,7 +80,7 @@ void GenesisGamepad::setGamepadDelegate(GenesisGamepadDelegate *delegate)
 #endif
 
 #if GENESIS_GAMEPAD_CALLBACK
-void GenesisGamepad::attachInterrupt(void (*gamepadInputsDidChangedCallback)(GenesisGamepad*,byte,byte))
+void GenesisGamepad::attachCallback(void (*gamepadInputsDidChangedCallback)(GenesisGamepad*,byte,byte))
 {
   _gamepadInputsDidChangedCallback = gamepadInputsDidChangedCallback;
 }

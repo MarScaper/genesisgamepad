@@ -85,7 +85,7 @@ public:
 
 #if GENESIS_GAMEPAD_CALLBACK
   /*! Set call back function for C backward compatibility if needed. */
-  void attachInterrupt(void (*gamepadInputsDidChangedCallback)(GenesisGamepad*,byte,byte));
+  void attachCallback(void (*gamepadInputsDidChangedCallback)(GenesisGamepad*,byte,byte));
 #endif
   
 private:
