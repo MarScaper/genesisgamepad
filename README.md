@@ -2,7 +2,7 @@
 ![Alt text](/genesis-gamepad.jpg?raw=true "Optional Title")
 
 ## Synopsis
-Simple C++ library allowing to control a Genesis/Mega Drive gamepad with an Arduino.
+Simple C++ library allowing to control a Genesis/Mega Drive gamepad for Arduino.
 
 ## Features
 - Press and release button feedback (see sample code).
