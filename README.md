@@ -10,7 +10,7 @@ Simple C++ library allowing to control a Genesis/Mega Drive gamepad with an Ardu
 - Adjustable refresh rate (default is 50Hz).
 - Multiple gamepad allowed.
 - Full C++ approach with delegation paradigm for asynchronous callbacks.
-- C compatiility with enhanced C function callbacks.
+- C compatibility with enhanced C function callbacks.
 
 ## DB9 connector
 ![Alt text](/db9_female.jpg?raw=true "Optional Title")
