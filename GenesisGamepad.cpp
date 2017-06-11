@@ -72,15 +72,19 @@ void GenesisGamepad::setEnable(bool state)
   }
 }
 
+#if GENESIS_GAMEPAD_DELEGATE
 void GenesisGamepad::setGamepadDelegate(GenesisGamepadDelegate *delegate)
 {
   _gamepadDelegate = delegate;
 }
+#endif
 
+#if GENESIS_GAMEPAD_CALLBACK
 void GenesisGamepad::attachInterrupt(void (*gamepadInputsDidChangedCallback)(GenesisGamepad*,byte,byte))
 {
   _gamepadInputsDidChangedCallback = gamepadInputsDidChangedCallback;
 }
+#endif
 
 void GenesisGamepad::update()
 {
@@ -120,16 +124,21 @@ void GenesisGamepad::update()
     // Only notify if inputs changed
     if( _lastInputs != newInputs )
     {
+#if GENESIS_GAMEPAD_CALLBACK
       if( _gamepadInputsDidChangedCallback )
       {
         // Use C callback for feedback
         _gamepadInputsDidChangedCallback(this,_lastInputs,newInputs);
       }
-      else if( _gamepadDelegate )
+#endif
+
+#if GENESIS_GAMEPAD_DELEGATE
+      if( _gamepadDelegate )
       {
         // Use delegate for feedback
         _gamepadDelegate->gamepadInputsDidChanged(this,_lastInputs,newInputs);
       }
+#endif
       
       // Store inputs for next loop
       _lastInputs = newInputs;

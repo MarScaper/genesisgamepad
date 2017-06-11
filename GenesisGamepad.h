@@ -23,6 +23,10 @@
 
 #include <Arduino.h>
 
+// Disable/Enable paradigm to your need to optimize memory
+#define GENESIS_GAMEPAD_CALLBACK    1
+#define GENESIS_GAMEPAD_DELEGATE    1
+
 #define GENESIS_GAMEPAD_UP_BUTTON    B10000000
 #define GENESIS_GAMEPAD_DOWN_BUTTON  B01000000
 #define GENESIS_GAMEPAD_LEFT_BUTTON  B00100000
@@ -71,14 +75,18 @@ public:
   /*! Enable/disable gamepad refresh. */
   void setEnable(bool state);
   
+#if GENESIS_GAMEPAD_DELEGATE
   /*! Set delegate for asynchronous feedback */
   void setGamepadDelegate(GenesisGamepadDelegate *delegate);
   
   /*! Get delegate used for asynchronous feedback. */
   inline GenesisGamepadDelegate *gamepadDelegate() {return _gamepadDelegate;};
+#endif
 
+#if GENESIS_GAMEPAD_CALLBACK
   /*! Set call back function for C backward compatibility if needed. */
   void attachInterrupt(void (*gamepadInputsDidChangedCallback)(GenesisGamepad*,byte,byte));
+#endif
   
 private:
   
@@ -98,9 +106,13 @@ private:
   
   bool _enabled;
   
+#if GENESIS_GAMEPAD_DELEGATE
   GenesisGamepadDelegate *_gamepadDelegate = NULL;
+#endif
   
+#if GENESIS_GAMEPAD_CALLBACK
   void (*_gamepadInputsDidChangedCallback)(GenesisGamepad*,byte,byte) = NULL;
+#endif
 };
 
 #endif
