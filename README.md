@@ -2,10 +2,13 @@
 ![Alt text](/genesisgamepad.jpg?raw=true "Optional Title")
 
 ## Synopsis
-
 Simple C++ library allowing to control a Genesis/Mega Drive gamepad with an Arduino.
 
 ## Features
+- Press and release button feedback (see sample code).
+- Enable/disable gamepad.
+- Adjustable refresh rate (default is 50Hz).
+- Multiple gamepad allowed.
 - Full C++ approach with delegation paradigm for asynchronous callbacks.
 - C compatiility with enhanced C function callbacks.
 
