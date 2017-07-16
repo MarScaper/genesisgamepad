@@ -33,17 +33,17 @@ GenesisGamepad::GenesisGamepad(int8_t upButtonPin, int8_t downButtonPin, int8_t 
   _startCButtonPin = startCButtonPin;
   
   // Set direction pin
-  pinMode(_upButtonPin,    INPUT);
-  pinMode(_downButtonPin,  INPUT);
-  pinMode(_leftButtonPin,  INPUT);
-  pinMode(_rightButtonPin, INPUT);
+  pinMode(_upButtonPin,    INPUT_PULLUP);
+  pinMode(_downButtonPin,  INPUT_PULLUP);
+  pinMode(_leftButtonPin,  INPUT_PULLUP);
+  pinMode(_rightButtonPin, INPUT_PULLUP);
   
   // Set other buttons if select button is set
   if( _selectButtonPin != -1 )
   {
     pinMode(_selectButtonPin, OUTPUT);
-    pinMode(_abButtonPin,     INPUT );
-    pinMode(_startCButtonPin, INPUT );
+    pinMode(_abButtonPin,     INPUT_PULLUP);
+    pinMode(_startCButtonPin, INPUT_PULLUP);
   }
   
   _lastRead   = millis();
